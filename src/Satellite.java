@@ -63,4 +63,27 @@ public abstract class Satellite {
         return isActive;
     }
 
+    public double getBatteryLevel() {
+        return batteryLevel;
+    }
+
+    @Override
+    public String toString() {
+        String batteryColor;
+        if (batteryLevel > 0.7) {
+            batteryColor = ConsoleColors.GREEN;
+        } else if (batteryLevel > 0.3) {
+            batteryColor = ConsoleColors.YELLOW;
+        } else {
+            batteryColor = ConsoleColors.RED;
+        }
+
+        String statusColor = isActive ? ConsoleColors.GREEN : ConsoleColors.RED;
+        String statusText = isActive ? "активен" : "неактивен";
+
+        return ConsoleColors.CYAN_BOLD + name + ConsoleColors.RESET +
+               " [" + statusColor + statusText + ConsoleColors.RESET + "] " +
+               "(заряд: " + batteryColor + String.format("%.0f", batteryLevel * 100) + "%" +
+               ConsoleColors.RESET + ")";
+    }
 }
