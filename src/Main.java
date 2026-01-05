@@ -1,3 +1,9 @@
+import entity.CommunicationSatellite;
+import entity.ImagingSatellite;
+import entity.Satellite;
+import entity.SatelliteConstellation;
+import utils.ConsoleColors;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("\n" + ConsoleColors.colorize(

@@ -1,3 +1,7 @@
+package entity;
+
+import utils.ConsoleColors;
+
 public abstract class Satellite {
     protected static final int DEFAULT_BATTERY_LEVEL = 100;
     protected static final boolean DEFAULT_ACTIVE = true;

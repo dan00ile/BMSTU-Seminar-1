@@ -1,3 +1,7 @@
+package entity;
+
+import utils.ConsoleColors;
+
 public class CommunicationSatellite extends Satellite {
     private final double bandwidth;
 
@@ -8,11 +12,11 @@ public class CommunicationSatellite extends Satellite {
     }
 
     public CommunicationSatellite(String name, boolean isActive, double bandwidth) {
-        this(name, isActive, DEFAULT_BATTERY_LEVEL, bandwidth);
+        this(name, isActive, Satellite.DEFAULT_BATTERY_LEVEL, bandwidth);
     }
 
     public CommunicationSatellite(String name, double bandwidth) {
-        this(name, DEFAULT_ACTIVE, DEFAULT_BATTERY_LEVEL, bandwidth);
+        this(name, Satellite.DEFAULT_ACTIVE, Satellite.DEFAULT_BATTERY_LEVEL, bandwidth);
     }
 
     public double getBandwidth() {

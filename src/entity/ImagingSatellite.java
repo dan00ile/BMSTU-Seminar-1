@@ -1,3 +1,7 @@
+package entity;
+
+import utils.ConsoleColors;
+
 public class ImagingSatellite extends Satellite {
     private final double resolution;
     private int photosTaken;
